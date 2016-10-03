@@ -1,0 +1,1 @@
+docker run --name store -d -p 8989:8080 payara/store
