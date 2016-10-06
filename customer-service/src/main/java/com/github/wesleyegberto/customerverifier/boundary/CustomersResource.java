@@ -21,9 +21,12 @@ import com.github.wesleyegberto.customerverifier.control.CustomerVerifier;
 @Path("/customers")
 public class CustomersResource {
 
-    private final CustomerVerifier verifier;
-
     @Inject
+    private CustomerVerifier verifier;
+
+    public CustomersResource() {
+	}
+    
     public CustomersResource(CustomerVerifier verifier) {
         this.verifier = verifier;
     }

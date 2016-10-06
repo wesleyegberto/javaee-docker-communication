@@ -18,7 +18,7 @@ public class CustomerVerifier {
     }
     
     public boolean isCustomerClear(String cpf) {
-        if(CpfValidator.isValid(cpf))
+        if(!CpfValidator.isValid(cpf))
             throw new BusinessException("Invalid CPF");
         
         return !DIRTY_CUSTOMERS.contains(cpf);
